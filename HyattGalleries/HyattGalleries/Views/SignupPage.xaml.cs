@@ -27,7 +27,7 @@ namespace HyattGalleries.Views
 
         private async void OnSignupButtonPressed(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new FilterPage());
         }
 	}
 }

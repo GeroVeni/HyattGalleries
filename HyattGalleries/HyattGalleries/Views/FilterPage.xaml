@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HyattGalleries.Views.FilterPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Filters" FontSize="24" Margin="16, 16, 16, 0"
+                    VerticalOptions="Start" HorizontalOptions="CenterAndExpand" />
+                <Label Text="Artist" FontSize="18" Margin="16, 0" />
+                <BoxView Color="Cyan" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
+                <CollectionView></CollectionView>
+                <!--<BoxView Color="DarkGray" HorizontalOptions="Fill" HeightRequest="150" Margin="16, 0" />-->
+                <Label Text="Time Period" FontSize="18" Margin="16, 0" />
+                <BoxView Color="Cyan" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0"/>
+                <!--<BoxView Color="DarkGray" HorizontalOptions="Fill" HeightRequest="150" Margin="16, 0" />-->
+                <Button Text="Create Route" FontSize="24" VerticalOptions="EndAndExpand" Clicked="OnCreateRoutePressed" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
