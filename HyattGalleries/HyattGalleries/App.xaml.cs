@@ -14,7 +14,7 @@ namespace HyattGalleries
             InitializeComponent();
 
 
-            MainPage = new MainPage();
+            MainPage = new IntroPage();
         }
 
         protected override void OnStart()
