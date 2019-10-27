@@ -15,18 +15,23 @@ namespace HyattGalleries.Views
 		public IntroPage ()
 		{
 			InitializeComponent ();
+
+            // Remove navigation bar from current page
+            NavigationPage.SetHasNavigationBar(this, false);
+            // TODO: Create class that inherits ContentPage and removes Navigation bar
+            // to avoid code replication
 		}
 
         private async void OnLoginPressed(object sender, EventArgs e)
         {
             // Login button is pressed
-            //await Navigation.PushAsync(new LoginPage());
+            await Navigation.PushAsync(new LoginPage());
         }
 
         private async void OnSignupPressed(object sender, EventArgs e)
         {
             // Signup button is pressed
-            //await Navigation.PushAsync(new SignupPage());
+            await Navigation.PushAsync(new SignupPage());
         }
 
         private async void OnForgottenPressed(object sender, EventArgs e)
