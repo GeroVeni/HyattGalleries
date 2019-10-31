@@ -16,5 +16,16 @@ namespace HyattGalleries.Views
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private async void onLoginClicked(object Sender, EventArgs e)
+        {
+            // Login, for now navigate to explore page
+            await Navigation.PushAsync(new ExplorePage());
+        }
+
+        private async void onFbLoginClicked(object Sender, EventArgs e)
+        {
+            // Login with Facebook
+        }
+    }
 }
