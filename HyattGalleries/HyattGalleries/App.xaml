@@ -4,11 +4,35 @@
              x:Class="HyattGalleries.App">
     <Application.Resources>
         <ResourceDictionary>
+            <!--Custom Colors (using material guidelines)-->
+            <!--Link for dark themes: https://material.io/design/color/dark-theme.html-->
+            <Color x:Key="BackgroundColor">#121212</Color>
+            <Color x:Key="SurfaceColor">#121212</Color>
+            <Color x:Key="PrimaryColor">#00acc1</Color>
+            <Color x:Key="PrimaryDarkColor">#007c91</Color>
+            <Color x:Key="PrimaryLightColor">#5ddef4</Color>
+            <Color x:Key="OnBackgroundColor">#ffffff</Color>
+            <Color x:Key="OnSurfaceColor">#ffffff</Color>
+            <Color x:Key="OnPrimaryColor">#ffffff</Color>
+            
             <!--Global Styles-->
             <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource OnSurfaceColor}" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource OnSurfaceColor}" />
+                <Setter Property="PlaceholderColor" Value="LightGray" />
+                <Setter Property="BackgroundColor" Value="#242424" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource OnPrimaryColor}" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
