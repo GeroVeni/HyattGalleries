@@ -22,7 +22,8 @@
                             <DataTemplate>
                                 <StackLayout Margin="8" WidthRequest="100" VerticalOptions="Fill">
                                     <Label Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="Center" />
-                                    <BoxView Color="{StaticResource PrimaryColor}" WidthRequest="30" VerticalOptions="Center" HorizontalOptions="Center" />
+                                    <CheckBox Color="{StaticResource PrimaryColor}" WidthRequest="30" HeightRequest="30"
+                                              VerticalOptions="Center" HorizontalOptions="Center"/>
                                 </StackLayout>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
@@ -37,7 +38,8 @@
                             <DataTemplate>
                                 <StackLayout Margin="8" WidthRequest="100" VerticalOptions="Fill">
                                     <Label Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="Center" />
-                                    <BoxView Color="{StaticResource PrimaryColor}" WidthRequest="30" VerticalOptions="Center" HorizontalOptions="Center" />
+                                    <CheckBox Color="{StaticResource PrimaryColor}" WidthRequest="30" HeightRequest="30"
+                                              VerticalOptions="Center" HorizontalOptions="Center"/>
                                 </StackLayout>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
