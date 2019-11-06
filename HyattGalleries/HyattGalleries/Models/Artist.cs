@@ -11,6 +11,6 @@ namespace HyattGalleries.Models
     {
         public string Name { get; set; }
 
-        public Artist(string Name) { this.Name = Name; }
+        public Artist(string name) { this.Name = name; }
     }
 }

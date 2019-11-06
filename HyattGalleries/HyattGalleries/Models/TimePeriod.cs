@@ -11,6 +11,6 @@ namespace HyattGalleries.Models
     {
         public string Name { get; set; }
 
-        public TimePeriod (string Name) { this.Name = Name; }
+        public TimePeriod (string name) { this.Name = name; }
     }
 }
