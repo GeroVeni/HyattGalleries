@@ -17,6 +17,7 @@ namespace HyattGalleries.ViewModels
         {
             Artists = new List<Artist>
             {
+                // TODO: Remove testing artists
                 new Artist("George"),
                 new Artist("John"),
                 new Artist("Dimitris"),
@@ -26,6 +27,7 @@ namespace HyattGalleries.ViewModels
 
             TimePeriods = new List<TimePeriod>
             {
+                // TODO: Remove testing time periods
                 new TimePeriod("16th century"),
                 new TimePeriod("17th century"),
                 new TimePeriod("18th century"),
