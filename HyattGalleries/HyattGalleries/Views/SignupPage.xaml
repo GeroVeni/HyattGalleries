@@ -16,7 +16,7 @@
             <Entry x:Name="password2Entry" Placeholder="Repeat Password" IsPassword="True" Margin="16, 0" ReturnType="Done" />
             
             <Button Text="Sign up" FontSize="18" Margin="16, 24, 16, 0" Clicked="OnSignupButtonPressed"/>
-            <Button Text="Sign up with Facebook" FontSize="18" Margin="16, 0" />
+            <Button Text="Sign up with Facebook" FontSize="18" Margin="16, 0" Clicked="OnSignupWithFbButtonPressed" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using HyattGalleries.Services;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +30,25 @@ namespace HyattGalleries.Views
         private async void OnSignupButtonPressed(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new FilterPage());
+        }
+
+        private async void OnSignupWithFbButtonPressed(object sender, EventArgs e)
+        {
+            try
+            {
+                var scanner = DependencyService.Get<IQrScanningService>();
+                var result = await scanner.ScanAsync();
+                // TODO: Handle case when result is null
+                if (result != null)
+                {
+                    Debug.WriteLine("Result is: " + result);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error during qrcode scanning:" + ex.Message);
+                // TODO: Return that scanning failed.
+            }
         }
 	}
 }

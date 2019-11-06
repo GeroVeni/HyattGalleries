@@ -18,6 +18,7 @@ namespace HyattGalleries.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+            ZXing.Mobile.MobileBarcodeScanner.Initialize(Application);
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
