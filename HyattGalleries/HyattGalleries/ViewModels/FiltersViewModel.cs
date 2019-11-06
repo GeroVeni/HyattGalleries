@@ -10,13 +10,27 @@ namespace HyattGalleries.ViewModels
     /// </summary>
     class FiltersViewModel
     {
-        public List<Artist> Artists;
+        public List<Artist> Artists { get; set; }
+        public List<TimePeriod> TimePeriods { get; set; }
 
         public FiltersViewModel()
         {
-            Artists = new List<Artist>();
-            Artists.Add(new Artist("George"));
-            Artists.Add(new Artist("John"));
+            Artists = new List<Artist>
+            {
+                new Artist("George"),
+                new Artist("John"),
+                new Artist("Dimitris"),
+                new Artist("Kostas"),
+                new Artist("Petros")
+            };
+
+            TimePeriods = new List<TimePeriod>
+            {
+                new TimePeriod("16th century"),
+                new TimePeriod("17th century"),
+                new TimePeriod("18th century"),
+                new TimePeriod("19th century")
+            };
         }
     }
 }

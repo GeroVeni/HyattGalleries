@@ -4,7 +4,7 @@
              x:Class="HyattGalleries.App">
     <Application.Resources>
         <ResourceDictionary>
-            <!--Custom Colors (using material guidelines)-->
+            <!--Custom Colors (using material guidelines: Cyan saturation 600)-->
             <!--Link for dark themes: https://material.io/design/color/dark-theme.html-->
             <Color x:Key="BackgroundColor">#121212</Color>
             <Color x:Key="SurfaceColor">#121212</Color>
@@ -16,6 +16,7 @@
             <Color x:Key="OnPrimaryColor">#ffffff</Color>
             
             <!--Global Styles-->
+            <!--This is where colors and styles are applied in the global context-->
             <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />

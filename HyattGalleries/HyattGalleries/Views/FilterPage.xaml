@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:HyattGalleries.ViewModels"
              x:Class="HyattGalleries.Views.FilterPage">
+    <ContentPage.BindingContext>
+        <vm:FiltersViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
@@ -11,33 +15,31 @@
 
                     <!--Artist Scroll list-->
                     <Label Text="Artist" FontSize="18" Margin="16, 0" />
-                    <BoxView Color="Cyan" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
-                    <CarouselView HeightRequest="150" ItemsSource="{Binding Items}"
-                              BackgroundColor="Gray" HorizontalOptions="Fill">
-                        <CarouselView.ItemTemplate>
+                    <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
+                    <CollectionView HeightRequest="150" ItemsSource="{Binding Artists}" ItemsLayout="HorizontalList">
+                        <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <StackLayout Margin="8" BackgroundColor="LightBlue" WidthRequest="100">
-                                    <BoxView Color="Black" WidthRequest="30" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" />
-                                    <Label Text="{Binding Text}" HorizontalOptions="Center" VerticalOptions="Center" />
+                                <StackLayout Margin="8" WidthRequest="100" VerticalOptions="Fill">
+                                    <Label Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="Center" />
+                                    <BoxView Color="{StaticResource PrimaryColor}" WidthRequest="30" VerticalOptions="Center" HorizontalOptions="Center" />
                                 </StackLayout>
                             </DataTemplate>
-                        </CarouselView.ItemTemplate>
-                    </CarouselView>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
 
                     <!--Time Period Scroll list-->
                     <Label Text="Time Period" FontSize="18" Margin="16, 0" />
-                    <BoxView Color="Cyan" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0"/>
-                    <CarouselView HeightRequest="150" ItemsSource="{Binding Items}"
-                              BackgroundColor="Gray" HorizontalOptions="Fill">
-                        <CarouselView.ItemTemplate>
+                    <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
+                    <CollectionView HeightRequest="150" ItemsSource="{Binding TimePeriods}" ItemsLayout="HorizontalList">
+                        <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <StackLayout Margin="8" BackgroundColor="LightBlue" WidthRequest="100">
-                                    <BoxView Color="Black" WidthRequest="30" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" />
-                                    <Label Text="{Binding Text}" HorizontalOptions="Center" VerticalOptions="Center" />
+                                <StackLayout Margin="8" WidthRequest="100" VerticalOptions="Fill">
+                                    <Label Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="Center" />
+                                    <BoxView Color="{StaticResource PrimaryColor}" WidthRequest="30" VerticalOptions="Center" HorizontalOptions="Center" />
                                 </StackLayout>
                             </DataTemplate>
-                        </CarouselView.ItemTemplate>
-                    </CarouselView>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </StackLayout>
             </ScrollView>
             <Button Text="Create Route" FontSize="24" VerticalOptions="EndAndExpand" Clicked="OnCreateRoutePressed" />

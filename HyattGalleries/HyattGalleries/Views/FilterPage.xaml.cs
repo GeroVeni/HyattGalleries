@@ -12,13 +12,13 @@ namespace HyattGalleries.Views
 	public partial class FilterPage : ContentPage
 	{
         FiltersViewModel viewModel;
-        ItemsViewModel itemsViewModel;
 
 		public FilterPage ()
 		{
 			InitializeComponent ();
 
-            BindingContext = itemsViewModel = new ItemsViewModel();
+            // Hold view model reference to make changes dynamically
+            BindingContext = viewModel = new FiltersViewModel();
 		}
 
         private async void OnCreateRoutePressed(object sender, EventArgs e)
