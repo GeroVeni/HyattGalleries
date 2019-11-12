@@ -1,28 +1,56 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HyattGalleries.Views.ExplorePage">
-    <StackLayout>
-            <FlexLayout Direction="Row" AlignItems="Center">
-                <BoxView Margin="10, 10, 50, 10" Color="Black"></BoxView>
-                <Label Text="Hyatt" FontSize="60" Margin="10, 10, 10, 10"></Label>
-                <BoxView Margin="70, 10, 10, 10" Color="Black"></BoxView>
-            </FlexLayout>
-            <Label Text="Preselected Routes" FontSize="20" Margin="5, 0, 5, 0"></Label>
-            <BoxView Color="Black" HeightRequest="2" Margin="5, 0, 5, 0"></BoxView>
-            <ScrollView Margin="5,10,5,10" Orientation="Horizontal" >
-                <StackLayout Orientation="Vertical" Padding="10,80,10,30">
-                    <!--<ImageButton ></ImageButton>-->
-                    <BoxView></BoxView>
-                    <Label ></Label>
-                </StackLayout>
-            </ScrollView>
-            <Label Text="Explore other Hyatt exhibitions" FontSize="20" Margin="5, 0, 5, 0"></Label>
-            <BoxView Color="Black" HeightRequest="2" Margin="5, 0, 5, 0"></BoxView>
-            <ScrollView Margin="5,10,5,10" Orientation="Horizontal" >
-                <StackLayout Orientation="Vertical" Padding="10,80,10,30">
-                    <!--<ImageButton ></ImageButton>-->
-                    <BoxView></BoxView>
-                    <Label ></Label>
-                </StackLayout>
-            </ScrollView>
-    </StackLayout>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:HyattGalleries.ViewModels"
+             x:Class="HyattGalleries.Views.ExplorePage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <vm:ExploreViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <!--Header-->
+            <StackLayout Orientation="Horizontal">
+                    <Image Margin="8" Source="AccountIcon.png" />
+                    <Label Text="HYATT" FontSize="60" Margin="8" HorizontalOptions="CenterAndExpand" />
+                    <Image Margin="8" Source="CartIcon.png" />
+            </StackLayout>
+        
+            <!--Preselected routes section-->
+            <Label Text="Preselected Routes" FontSize="20" Margin="16, 0"></Label>
+            <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
+            <CollectionView HeightRequest="150" ItemsSource="{Binding PreselectedRoutes}" ItemsLayout="HorizontalList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <StackLayout Margin="8" WidthRequest="200">
+                                <BoxView Color="{StaticResource PrimaryColor}" HeightRequest="100"
+                                         HorizontalOptions="Fill"/>
+                                <Label Text="{Binding name}" TextColor="{StaticResource OnSurfaceColor}"
+                                        VerticalOptions="End" HorizontalTextAlignment="Center" />
+                            </StackLayout>
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!--Popular Exhibits section-->
+            <Label Text="Popular Exhibits" FontSize="20" Margin="16, 0"></Label>
+            <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
+            <CollectionView HeightRequest="150" ItemsSource="{Binding PopularExhibits}" ItemsLayout="HorizontalList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <StackLayout Margin="8" WidthRequest="200">
+                                <BoxView Color="{StaticResource PrimaryColor}" HeightRequest="100"
+                                         HorizontalOptions="Fill"/>
+                                <Label Text="{Binding name}" TextColor="{StaticResource OnSurfaceColor}"
+                                        VerticalOptions="End" HorizontalTextAlignment="Center" />
+                            </StackLayout>
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
