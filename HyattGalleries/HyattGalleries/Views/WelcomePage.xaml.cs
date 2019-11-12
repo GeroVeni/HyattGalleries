@@ -22,5 +22,11 @@ namespace HyattGalleries.Views
             // Navigate to Explore Page
             await Navigation.PushAsync(new ExplorePage());
         }
+
+        private async void OnExhibitionClicked(object Sender, SelectionChangedEventArgs e)
+        {
+            // An exhibition was clicked so switch to that exhibition
+            // TODO: Implement
+        }
     }
 }

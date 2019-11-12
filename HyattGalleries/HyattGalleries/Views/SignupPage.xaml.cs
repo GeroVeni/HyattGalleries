@@ -36,7 +36,8 @@ namespace HyattGalleries.Views
         {
             // TODO: Implement signup with facebook
             // For now, navigate to Welcome page.
-            await Navigation.PushAsync(new WelcomePage());
+            //await Navigation.PushAsync(new WelcomePage());
+            await Navigation.PushAsync(new FilterPage());
         }
 
         // DO NOT DELETE

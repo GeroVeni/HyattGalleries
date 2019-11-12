@@ -18,11 +18,12 @@
             <!--Other exhibitions-->
             <Label Text="Explore other exhibitions" FontSize="20" Margin="16, 0" />
             <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
-            <CollectionView HeightRequest="150" ItemsSource="{Binding Exhibitions}" ItemsLayout="HorizontalList">
+            <CollectionView HeightRequest="150" SelectionMode="Single" SelectionChanged="OnExhibitionClicked"
+                            ItemsSource="{Binding Exhibitions}" ItemsLayout="HorizontalList">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <ContentView>
-                            <StackLayout Margin="8" WidthRequest="200">
+                            <StackLayout Margin="8" WidthRequest="200" >
                                 <BoxView Color="{StaticResource PrimaryColor}" HeightRequest="100"
                                              HorizontalOptions="Fill"/>
                                 <Label Text="{Binding name}" TextColor="{StaticResource OnSurfaceColor}"

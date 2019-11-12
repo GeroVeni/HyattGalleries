@@ -1,5 +1,4 @@
-﻿using HyattGalleries.Models;
-using HyattGalleries.ViewModels;
+﻿using HyattGalleries.ViewModels;
 using System;
 using System.Collections.Generic;
 

@@ -15,7 +15,6 @@
 
                     <!--Artist Scroll list-->
                     <Label Text="Artist" FontSize="18" Margin="16, 0" />
-                    <!--Placeholder for ON/OFF icon-->
                     <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
                     <CollectionView HeightRequest="150" ItemsSource="{Binding Artists}" ItemsLayout="HorizontalList">
                         <CollectionView.ItemTemplate>
