@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HyattGalleries.Views.SignupPage">
+             x:Class="HyattGalleries.Views.SignupPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="HYATT" FontSize= "70" Margin="16, 50, 16, 32"
@@ -15,8 +16,10 @@
             <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True" Margin="16, 0" ReturnType="Next" />
             <Entry x:Name="password2Entry" Placeholder="Repeat Password" IsPassword="True" Margin="16, 0" ReturnType="Done" />
             
-            <Button Text="Sign up" FontSize="18" Margin="16, 24, 16, 0" Clicked="OnSignupButtonPressed"/>
-            <Button Text="Sign up with Facebook" FontSize="18" Margin="16, 0" Clicked="OnSignupWithFbButtonPressed" />
+            <Button Text="Sign up" FontSize="18" Margin="16, 24, 16, 0"
+                    HeightRequest="50" CornerRadius="25" Clicked="OnSignupButtonPressed"/>
+            <Button Text="Sign up with Facebook" FontSize="18" Margin="16, 0"
+                    HeightRequest="50" CornerRadius="25" Clicked="OnSignupWithFbButtonPressed" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

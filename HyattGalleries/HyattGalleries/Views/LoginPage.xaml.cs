@@ -19,13 +19,17 @@ namespace HyattGalleries.Views
 
         private async void onLoginClicked(object Sender, EventArgs e)
         {
-            // Login, for now navigate to explore page
-            await Navigation.PushAsync(new ExplorePage());
+            // Login
+            // TODO: Implement login
+            // For now navigate to welcome page
+            await Navigation.PushAsync(new WelcomePage());
         }
 
         private async void onFbLoginClicked(object Sender, EventArgs e)
         {
-            // Login with Facebook
+            // TODO: Implement loging in with Facebook.
+            // For now, navigate to the welcome page.
+            await Navigation.PushAsync(new WelcomePage());
         }
     }
 }

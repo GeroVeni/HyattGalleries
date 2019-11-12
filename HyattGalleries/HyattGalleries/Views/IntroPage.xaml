@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 x:Class="HyattGalleries.Views.IntroPage">
-        <ContentPage.Content>
-            <StackLayout>
-                <Label Text="HYATT" FontSize= "70" Margin="0, 50, 0, 0"
-                        VerticalOptions="StartAndExpand"  HorizontalOptions="Center" />
-                <Button Text="Log In" FontSize="40" WidthRequest="300" HeightRequest="70"
-                        HorizontalOptions="Center" Clicked="OnLoginPressed" />
-                <Button Text="Sign Up" FontSize="40" WidthRequest="300" HeightRequest="70"
-                        HorizontalOptions="Center" Clicked="OnSignupPressed" />
-                <Button Text="Forgotten your password?" Margin="0, 0, 0, 50"
-                       HorizontalOptions="Center" VerticalOptions="EndAndExpand"
-                        BackgroundColor="Transparent" BorderColor="Transparent" Clicked="OnForgottenPressed"/>
-            </StackLayout>
-        </ContentPage.Content>
-    </ContentPage>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HyattGalleries.Views.IntroPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="HYATT" FontSize= "70" Margin="0, 50, 0, 0"
+                    VerticalOptions="StartAndExpand"  HorizontalOptions="Center" />
+            <Button Text="Log In" FontSize="40" WidthRequest="300" HeightRequest="70" CornerRadius="35"
+                    HorizontalOptions="Center" Clicked="OnLoginPressed" />
+            <Button Text="Sign Up" FontSize="40" WidthRequest="300" HeightRequest="70" CornerRadius="35"
+                    HorizontalOptions="Center" Clicked="OnSignupPressed" />
+            <Button Text="Forgotten your password?" Margin="0, 0, 0, 50"
+                    HorizontalOptions="Center" VerticalOptions="EndAndExpand"
+                    BackgroundColor="Transparent" BorderColor="Transparent" Clicked="OnForgottenPressed"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -13,7 +13,6 @@ namespace HyattGalleries
         {
             InitializeComponent();
 
-
             MainPage = new NavigationPage(new IntroPage());
         }
 

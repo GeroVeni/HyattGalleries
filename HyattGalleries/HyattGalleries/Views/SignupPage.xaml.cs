@@ -18,8 +18,6 @@ namespace HyattGalleries.Views
 		{
 			InitializeComponent ();
 
-            NavigationPage.SetHasNavigationBar(this, false);
-
             usernameEntry.Completed += (s, e) => nameEntry.Focus();
             nameEntry.Completed += (s, e) => emailEntry.Focus();
             emailEntry.Completed += (s, e) => passwordEntry.Focus();
@@ -29,26 +27,37 @@ namespace HyattGalleries.Views
 
         private async void OnSignupButtonPressed(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new FilterPage());
+            // TODO: Implement signup
+            // For now, navigate to Welcome page.
+            await Navigation.PushAsync(new WelcomePage());
         }
 
         private async void OnSignupWithFbButtonPressed(object sender, EventArgs e)
         {
-            try
-            {
-                var scanner = DependencyService.Get<IQrScanningService>();
-                var result = await scanner.ScanAsync();
-                // TODO: Handle case when result is null
-                if (result != null)
-                {
-                    Debug.WriteLine("Result is: " + result);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("Error during qrcode scanning:" + ex.Message);
-                // TODO: Return that scanning failed.
-            }
+            // TODO: Implement signup with facebook
+            // For now, navigate to Welcome page.
+            await Navigation.PushAsync(new WelcomePage());
         }
+
+        // DO NOT DELETE
+        // Test code for Launching the QRcode scanner
+        //private async void OnSignupWithFbButtonPressed(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        var scanner = DependencyService.Get<IQrScanningService>();
+        //        var result = await scanner.ScanAsync();
+        //        // TODO: Handle case when result is null
+        //        if (result != null)
+        //        {
+        //            Debug.WriteLine("Result is: " + result);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Debug.WriteLine("Error during qrcode scanning:" + ex.Message);
+        //        // TODO: Return that scanning failed.
+        //    }
+        //}
 	}
 }

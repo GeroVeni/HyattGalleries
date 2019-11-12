@@ -14,12 +14,9 @@ namespace HyattGalleries.Views
 	{
 		public IntroPage ()
 		{
-			InitializeComponent ();
+            InitializeComponent();
 
-            // Remove navigation bar from current page
-            NavigationPage.SetHasNavigationBar(this, false);
-            // TODO: Create class that inherits ContentPage and removes Navigation bar
-            // to avoid code replication
+            // TODO: Create class that inherits ContentPage and removes Navigation bar to avoid code replication
 		}
 
         private async void OnLoginPressed(object sender, EventArgs e)
