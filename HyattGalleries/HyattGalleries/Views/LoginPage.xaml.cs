@@ -22,7 +22,7 @@ namespace HyattGalleries.Views
             // Login
             // TODO: Implement login
             // For now navigate to welcome page
-            await Navigation.PushAsync(new WelcomePage());
+            await Navigation.PushAsync(new MainPage());
         }
 
         private async void onFbLoginClicked(object Sender, EventArgs e)
