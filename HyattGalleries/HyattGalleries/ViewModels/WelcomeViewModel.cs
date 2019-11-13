@@ -11,7 +11,7 @@ namespace HyattGalleries.ViewModels
         public WelcomeViewModel()
         {
             Exhibitions = new List<Exhibition>();
-            for (int i = 0; i < 5; i++) Exhibitions.Add(new Exhibition { imageSource = "", name = "test exhibition" });
+            for (int i = 0; i < 5; i++) Exhibitions.Add(new Exhibition { imageSource = "", name = "test exhibition " + i });
         }
 
         public class Exhibition

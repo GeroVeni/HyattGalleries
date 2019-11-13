@@ -11,14 +11,14 @@
         <StackLayout>
              <Label Text="HYATT" FontSize= "70" Margin="0, 50, 0, 0"
                             VerticalOptions="StartAndExpand"  HorizontalOptions="Center" />
-            <Label Text="Welcome to Hyatt Thessaloniki" FontSize="25" Margin="10, 0, 0, 10" HorizontalTextAlignment="Center" />
+            <Label x:Name="welcomeLabel" Text="Welcome to Hyatt Thessaloniki" FontSize="25" Margin="10, 0, 0, 10" HorizontalTextAlignment="Center" />
             <Button Text="Explore" FontSize="30" Margin="50,0,50,20"
                     HeightRequest="70" CornerRadius="35" Clicked="onExploreClicked" />
         
             <!--Other exhibitions-->
             <Label Text="Explore other exhibitions" FontSize="20" Margin="16, 0" />
             <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
-            <CollectionView HeightRequest="150" SelectionMode="Single" SelectionChanged="OnExhibitionClicked"
+            <CollectionView x:Name="exhibitionsCollView" HeightRequest="150" SelectionMode="Single" SelectionChanged="OnExhibitionClicked"
                             ItemsSource="{Binding Exhibitions}" ItemsLayout="HorizontalList">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
