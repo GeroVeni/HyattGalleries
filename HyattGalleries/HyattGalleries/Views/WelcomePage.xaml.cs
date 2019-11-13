@@ -24,20 +24,23 @@ namespace HyattGalleries.Views
             await Navigation.PushAsync(new ExplorePage());
         }
 
-        private async void OnExhibitionClicked(object Sender, SelectionChangedEventArgs e)
+        private void OnExhibitionClicked(object Sender, SelectionChangedEventArgs e)
         {
-            // An exhibition was clicked so switch to that exhibition
+            // If selection is empty that means it was deselected
             if (e.CurrentSelection.Count == 0) return;
-            
+
+            // An exhibition was clicked so switch to that exhibition
             Exhibition ex = e.CurrentSelection[0] as Exhibition;
             welcomeLabel.Text = GetWelcomeString(ex.name);
+
+            // Deselect item from the list
             exhibitionsCollView.SelectedItem = null;
         }
 
         #region Utility functions
 
         private string GetWelcomeString(string venueName) => "Welcome to " + venueName + ".";
-        private string GetWelcomeString() => GetWelcomeString("Hyatt Thessaloniki");
+        private string GetWelcomeString() => GetWelcomeString("Myro Thessaloniki");
         
         #endregion
     }

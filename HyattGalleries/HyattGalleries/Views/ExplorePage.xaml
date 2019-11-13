@@ -19,7 +19,8 @@
             <!--Preselected routes section-->
             <Label Text="Preselected Routes" FontSize="20" Margin="16, 0"></Label>
             <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
-            <CollectionView HeightRequest="150" ItemsSource="{Binding PreselectedRoutes}" ItemsLayout="HorizontalList">
+            <CollectionView x:Name="routesCollView" HeightRequest="150" ItemsSource="{Binding PreselectedRoutes}"
+                            ItemsLayout="HorizontalList" SelectionMode="Single" SelectionChanged="OnRouteSelected">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <ContentView>
@@ -37,7 +38,8 @@
             <!--Popular Exhibits section-->
             <Label Text="Popular Exhibits" FontSize="20" Margin="16, 0"></Label>
             <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
-            <CollectionView HeightRequest="150" ItemsSource="{Binding PopularExhibits}" ItemsLayout="HorizontalList">
+            <CollectionView x:Name="exhibitCollView" HeightRequest="150" ItemsSource="{Binding PopularExhibits}"
+                            ItemsLayout="HorizontalList" SelectionMode="Single" SelectionChanged="OnExhibitSelected">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <ContentView>
