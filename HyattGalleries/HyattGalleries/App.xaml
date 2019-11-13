@@ -8,9 +8,9 @@
             <!--Link for dark themes: https://material.io/design/color/dark-theme.html-->
             <Color x:Key="BackgroundColor">#121212</Color>
             <Color x:Key="SurfaceColor">#121212</Color>
-            <Color x:Key="PrimaryColor">#00acc1</Color>
-            <Color x:Key="PrimaryDarkColor">#007c91</Color>
-            <Color x:Key="PrimaryLightColor">#5ddef4</Color>
+            <Color x:Key="PrimaryColor">#39a8a4</Color>
+            <Color x:Key="PrimaryDarkColor">#007875</Color>
+            <Color x:Key="PrimaryLightColor">#71dad5</Color>
             <!--Colors used for text and elements on the respective colors to achieve contrast and legibility-->
             <Color x:Key="OnBackgroundColor">#ffffff</Color>
             <Color x:Key="OnSurfaceColor">#ffffff</Color>
