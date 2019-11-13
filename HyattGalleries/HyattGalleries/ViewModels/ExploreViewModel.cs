@@ -15,10 +15,10 @@ namespace HyattGalleries.ViewModels
         public ExploreViewModel ()
         {
             PreselectedRoutes = new List<RouteInfo>();
-            for (int i = 0; i < 5; i++) PreselectedRoutes.Add(new RouteInfo { imageSource = "", name = "test route" });
+            for (int i = 0; i < 5; i++) PreselectedRoutes.Add(new RouteInfo { imageSource = "", name = "test route " + i });
 
             PopularExhibits = new List<ExhibitInfo>();
-            for (int i = 0; i < 5; i++) PopularExhibits.Add(new ExhibitInfo { imageSource = "", name = "test exhibit" });
+            for (int i = 0; i < 5; i++) PopularExhibits.Add(new ExhibitInfo { imageSource = "", name = "test exhibit " + i });
         }
 
         /// <summary>
