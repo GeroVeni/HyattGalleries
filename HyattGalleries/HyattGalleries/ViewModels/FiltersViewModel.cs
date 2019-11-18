@@ -22,7 +22,7 @@ namespace HyattGalleries.ViewModels
         public FiltersViewModel()
         {
             // Create some demo exhibits
-            exhibits = GetDemoExhibits();
+            exhibits = ExhibitBase.GetExhibitBase().exhibits;
 
             // Find out all artists and deselect all of them
             Artists = GetArtists(exhibits);
@@ -38,30 +38,6 @@ namespace HyattGalleries.ViewModels
             ArtStyles = GetArtStyles(exhibits);
             IsArtStyleSelected = new List<bool>(ArtStyles.Count);
             for (int i = 0; i < ArtStyles.Count; i++) IsArtStyleSelected.Add(false);
-
-            // Preselect some artists, time periods and art styles for demo purposes
-            IsArtStyleSelected[0] = true;
-            IsTimePeriodSelected[1] = true;
-            IsTimePeriodSelected[3] = true;
-            IsArtStyleSelected[2] = true;
-        }
-
-        // Returns a list of demo exhibits
-        private List<Exhibit> GetDemoExhibits()
-        {
-            List<Exhibit> exhibits = new List<Exhibit>
-            {
-                new Exhibit("AAAA", "George A", "18th century", "Romanticism"),
-                new Exhibit("BBBB", "John A", "18th century", "Romanticism"),
-                new Exhibit("CCCC", "Dimitris A", "17th century", "Romanticism"),
-                new Exhibit("DDDD", "Kostas A", "17th century", "Romanticism"),
-                new Exhibit("EEEE", "George B", "19th century", "Renaissance"),
-                new Exhibit("FFFF", "John B", "19th century", "Renaissance"),
-                new Exhibit("GGGG", "George B", "19th century", "Renaissance"),
-                new Exhibit("HHHH", "George B", "12th century", "Classic"),
-                new Exhibit("IIII", "John B", "12th century", "Classic")
-            };
-            return exhibits;
         }
 
         // Returns a list of unique artists from a list of exhibits.
