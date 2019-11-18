@@ -7,7 +7,7 @@
             <!--Custom Colors (using material guidelines: Cyan saturation 600)-->
             <!--Link for dark themes: https://material.io/design/color/dark-theme.html-->
             <Color x:Key="BackgroundColor">#121212</Color>
-            <Color x:Key="SurfaceColor">#121212</Color>
+            <Color x:Key="SurfaceColor">#181818</Color>
             <Color x:Key="PrimaryColor">#39a8a4</Color>
             <Color x:Key="PrimaryDarkColor">#007875</Color>
             <Color x:Key="PrimaryLightColor">#71dad5</Color>
