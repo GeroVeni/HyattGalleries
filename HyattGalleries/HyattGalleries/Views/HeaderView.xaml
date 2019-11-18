@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HyattGalleries.Views.HeaderView">
+  <ContentView.Content>
+        <StackLayout Orientation="Horizontal">
+            <Image Margin="8" Source="ic_account.png" />
+            <Label Text="HYATT" FontSize="60" Margin="8" HorizontalOptions="CenterAndExpand" />
+            <Image Margin="8" Source="ic_basket.png" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
