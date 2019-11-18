@@ -11,7 +11,7 @@
             BarBackgroundColor="{StaticResource SurfaceColor}"
             BarTextColor="{StaticResource OnSurfaceColor}">
     <!--Pages can be added as references or inline-->
-    <views:WelcomePage Title="Home" IconImageSource="AccountIcon.png" />
-    <views:WelcomePage Title="Explore" IconImageSource="CartIcon.png" />
-    <views:WelcomePage Title="My Routes" IconImageSource="AccountIcon.png" />
+    <views:ExplorePage Title="HOME" IconImageSource="ic_home.png" />
+    <views:ScannerPage Title="EXPLORE" IconImageSource="ic_explore.png" />
+    <views:FilterPage Title="ROUTES" IconImageSource="ic_routes.png" />
 </TabbedPage>

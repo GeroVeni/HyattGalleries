@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:HyattGalleries.ViewModels"
+             xmlns:views="clr-namespace:HyattGalleries.Views"
              x:Class="HyattGalleries.Views.ExplorePage"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
@@ -10,12 +11,8 @@
     <ContentPage.Content>
         <StackLayout>
             <!--Header-->
-            <StackLayout Orientation="Horizontal">
-                    <Image Margin="8" Source="AccountIcon.png" />
-                    <Label Text="HYATT" FontSize="60" Margin="8" HorizontalOptions="CenterAndExpand" />
-                    <Image Margin="8" Source="CartIcon.png" />
-            </StackLayout>
-        
+            <views:HeaderView />
+
             <!--Preselected routes section-->
             <Label Text="Preselected Routes" FontSize="20" Margin="16, 0"></Label>
             <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
@@ -44,9 +41,9 @@
                     <DataTemplate>
                         <ContentView>
                             <StackLayout Margin="8" WidthRequest="200">
-                                <BoxView Color="{StaticResource PrimaryColor}" HeightRequest="100"
+                                <Image Source="{Binding ImageSource}" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="100"
                                          HorizontalOptions="Fill"/>
-                                <Label Text="{Binding name}" TextColor="{StaticResource OnSurfaceColor}"
+                                <Label Text="{Binding Name}" TextColor="{StaticResource OnSurfaceColor}"
                                         VerticalOptions="End" HorizontalTextAlignment="Center" />
                             </StackLayout>
                         </ContentView>

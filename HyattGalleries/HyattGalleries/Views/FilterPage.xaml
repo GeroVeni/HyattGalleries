@@ -2,14 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:HyattGalleries.ViewModels"
-             x:Class="HyattGalleries.Views.FilterPage">
+             xmlns:views="clr-namespace:HyattGalleries.Views"
+             x:Class="HyattGalleries.Views.FilterPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.BindingContext>
         <vm:FiltersViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
+            <views:HeaderView />
+
             <ScrollView>
                 <StackLayout>
+
                     <Label Text="Filters" FontSize="24" Margin="16, 16, 16, 0"
                     VerticalOptions="Start" HorizontalOptions="CenterAndExpand" />
 
