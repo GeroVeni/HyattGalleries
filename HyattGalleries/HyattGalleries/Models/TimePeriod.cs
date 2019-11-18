@@ -7,7 +7,7 @@ namespace HyattGalleries.Models
     /// <summary>
     /// Class representing a time period. Used in route filtering.
     /// </summary>
-    class TimePeriod
+    public class TimePeriod
     {
         public string Name { get; set; }
 

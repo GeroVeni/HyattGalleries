@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HyattGalleries.Models
 {
-    class ArtStyle
+    public class ArtStyle
     {
         public string Name { get; set; }
 
