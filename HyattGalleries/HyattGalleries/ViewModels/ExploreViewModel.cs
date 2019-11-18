@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HyattGalleries.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,24 +11,18 @@ namespace HyattGalleries.ViewModels
     class ExploreViewModel
     {
         public List<RouteInfo> PreselectedRoutes { get; set; }
-        public List<ExhibitInfo> PopularExhibits { get; set; }
+        public List<Exhibit> PopularExhibits { get; set; }
 
         public ExploreViewModel ()
         {
             PreselectedRoutes = new List<RouteInfo>();
             for (int i = 0; i < 5; i++) PreselectedRoutes.Add(new RouteInfo { imageSource = "", name = "test route " + i });
 
-            PopularExhibits = new List<ExhibitInfo>();
-            for (int i = 0; i < 5; i++) PopularExhibits.Add(new ExhibitInfo { imageSource = "", name = "test exhibit " + i });
-        }
+            ExhibitBase exhibitBase = ExhibitBase.GetExhibitBase();
 
-        /// <summary>
-        /// Helper class for storing information about an exhibit.
-        /// </summary>
-        public class ExhibitInfo
-        {
-            public string imageSource;
-            public string name { get; set; }
+            PopularExhibits = new List<Exhibit>();
+            int exhibitCount = Math.Min(5, exhibitBase.exhibits.Count);
+            for (int i = 0; i < exhibitCount; i++) PopularExhibits.Add(exhibitBase.exhibits[i]);
         }
 
         /// <summary>
