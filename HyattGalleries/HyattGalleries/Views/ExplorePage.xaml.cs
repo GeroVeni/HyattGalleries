@@ -1,4 +1,5 @@
-﻿using HyattGalleries.ViewModels;
+﻿using HyattGalleries.Models;
+using HyattGalleries.ViewModels;
 using System;
 using System.Collections.Generic;
 
@@ -27,6 +28,9 @@ namespace HyattGalleries.Views
             // Open map page
             // TODO: Parametrize map page to open specific route
             await Navigation.PushAsync(new MapPage());
+
+            // Deselect item
+            routesCollView.SelectedItem = null;
         }
 
         private async void OnExhibitSelected(object sender, SelectionChangedEventArgs e)
@@ -38,7 +42,10 @@ namespace HyattGalleries.Views
 
             // Open exhibit page
             // TODO: Parametrize exhibit page to open specified exhibit
-            await Navigation.PushAsync(new ExhibitPage());
+            await Navigation.PushAsync(new ExhibitPage(e.CurrentSelection[0] as Exhibit));
+
+            // Deselect item
+            exhibitCollView.SelectedItem = null;
         }
     }
 }
