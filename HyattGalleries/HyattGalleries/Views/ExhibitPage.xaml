@@ -1,20 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HyattGalleries.Views.ExhibitPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:HyattGalleries.ViewModels"
+             xmlns:views="clr-namespace:HyattGalleries.Views"
+             x:Class="HyattGalleries.Views.ExhibitPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <vm:ExhibitViewModel />
+    </ContentPage.BindingContext>
     <StackLayout>
-        <FlexLayout Direction="Row" AlignItems="Center">
-            <Label Text="Hyatt" FontSize="60" Margin="100, 0, 10, 10"></Label>
-            <BoxView Margin="70, 8, 10, 10" Color="Black"></BoxView>
-        </FlexLayout>
-        <BoxView Color="Black" Margin="30, 15, 30, 10" HeightRequest="200"></BoxView>
-        <Label Text="A Girl in the streets" HorizontalTextAlignment="Center" FontSize="20"></Label>
-        <FlexLayout Direction="Row" AlignItems="Center" >
-            <BoxView Color="Black" Margin="30, 0, 20, 0" HeightRequest="50" WidthRequest="50"></BoxView>
-            <BoxView Color="Black" Margin="70, 0, 70, 0" HeightRequest="50" WidthRequest="50"></BoxView>
-            <BoxView Color="Black" Margin="20, 0, 30, 0" HeightRequest="50" WidthRequest="50"></BoxView>
-        </FlexLayout>
-        <Label Margin="30, 10, 30, 10" Font="20"
-            Text="Joannes Vermeer's 1665 study of a young woman is startlingly real and startingly modern, almost as if it were a photograph">
-        </Label>
+        <views:HeaderView />
+
+        <Image Source="{Binding ImageSource}" BackgroundColor="{StaticResource PrimaryColor}" Aspect="AspectFit"
+               Margin="30, 10" HeightRequest="200" />
+        <Label Text="{Binding ExhibitName}" HorizontalTextAlignment="Center" FontSize="20"></Label>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Image Source="ic_play.png" Margin="16" />
+            <Image Source="ic_pause.png" Margin="16" />
+            <Image Source="ic_replay.png" Margin="16" />
+        </StackLayout>
+        <Label Margin="30, 10, 30, 10" Font="20" Text="{Binding ExhibitDescription}" />
         <FlexLayout AlignItems="Center">
             <Button Text="Artist's Bio" Margin="30, 0, 15, 0" WidthRequest="200"></Button>
             <BoxView Color="Black" Margin="20, 0, 0, 0" WidthRequest="40" HeightRequest="40"></BoxView>
