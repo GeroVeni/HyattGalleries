@@ -11,11 +11,12 @@ namespace HyattGalleries.Views
     {
         ExhibitViewModel viewModel;
 
-        public ExhibitPage(Exhibit exhibit)
+        public ExhibitPage(Guid exhibitID)
         {
             InitializeComponent();
 
             viewModel = new ExhibitViewModel();
+            Exhibit exhibit = ExhibitBase.GetExhibitBase().Exhibits.Find((e) => e.ID == exhibitID);
             viewModel.ImageSource = exhibit.ImageSource;
             viewModel.ExhibitName = exhibit.Name;
             viewModel.ExhibitDescription = exhibit.Name;

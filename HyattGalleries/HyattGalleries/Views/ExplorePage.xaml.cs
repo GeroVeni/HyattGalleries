@@ -42,7 +42,8 @@ namespace HyattGalleries.Views
 
             // Open exhibit page
             // TODO: Parametrize exhibit page to open specified exhibit
-            await Navigation.PushAsync(new ExhibitPage(e.CurrentSelection[0] as Exhibit));
+            Exhibit exhibit = e.CurrentSelection[0] as Exhibit;
+            await Navigation.PushAsync(new ExhibitPage(exhibit.ID));
 
             // Deselect item
             exhibitCollView.SelectedItem = null;
