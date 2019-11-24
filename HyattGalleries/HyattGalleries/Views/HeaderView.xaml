@@ -4,9 +4,9 @@
              x:Class="HyattGalleries.Views.HeaderView">
   <ContentView.Content>
         <StackLayout Orientation="Horizontal">
-            <Image Margin="8" Source="ic_account.png" />
+            <Image x:Name="image_account" Margin="8" Source="ic_account.png"/>
             <Label Text="HYATT" FontSize="60" Margin="8" HorizontalOptions="CenterAndExpand" />
-            <Image Margin="8" Source="ic_basket.png" />
+            <Image x:Name="image_basket" Margin="8" Source="ic_basket.png"/>
         </StackLayout>
     </ContentView.Content>
 </ContentView>

@@ -15,6 +15,21 @@ namespace HyattGalleries.Views
 		public HeaderView ()
 		{
 			InitializeComponent ();
+
+            // Make account icon clickable
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += (s, e) =>
+            {
+                Navigation.PushAsync(new AccountPage());
+            };
+            image_account.GestureRecognizers.Add(tapGestureRecognizer);
+
+            //Make basket icon clickable
+            tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += (s, e) =>
+            {
+                Navigation.PushAsync(new FavouritesPage());
+            }
 		}
 	}
 }
