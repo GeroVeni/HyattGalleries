@@ -22,7 +22,7 @@ namespace HyattGalleries.ViewModels
         public FiltersViewModel()
         {
             // Create some demo exhibits
-            exhibits = ExhibitBase.GetExhibitBase().exhibits;
+            exhibits = ExhibitBase.GetExhibitBase().Exhibits;
 
             // Find out all artists and deselect all of them
             Artists = GetArtists(exhibits);

@@ -21,8 +21,8 @@ namespace HyattGalleries.ViewModels
             ExhibitBase exhibitBase = ExhibitBase.GetExhibitBase();
 
             PopularExhibits = new List<Exhibit>();
-            int exhibitCount = Math.Min(5, exhibitBase.exhibits.Count);
-            for (int i = 0; i < exhibitCount; i++) PopularExhibits.Add(exhibitBase.exhibits[i]);
+            int exhibitCount = Math.Min(5, exhibitBase.Exhibits.Count);
+            for (int i = 0; i < exhibitCount; i++) PopularExhibits.Add(exhibitBase.Exhibits[i]);
         }
 
         /// <summary>
