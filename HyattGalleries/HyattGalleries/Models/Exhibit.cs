@@ -9,6 +9,7 @@ namespace HyattGalleries.Models
     /// </summary>
     public class Exhibit
     {
+        public Guid ID { get; private set; }
         public string Name { get; set; }
         public string ImageSource { get; set; }
         public Artist Artist { get; set; }
@@ -17,6 +18,7 @@ namespace HyattGalleries.Models
 
         public Exhibit(string name, string imageSource, Artist Artist, TimePeriod TimePeriod, ArtStyle ArtStyle)
         {
+            ID = Guid.NewGuid();
             this.Name = name;
             this.ImageSource = imageSource;
             this.Artist = Artist;

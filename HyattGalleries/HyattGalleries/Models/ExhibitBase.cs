@@ -11,14 +11,17 @@ namespace HyattGalleries.Models
     {
         private static ExhibitBase instance = null;
 
-        public List<Exhibit> exhibits;
+        private List<Guid> favouriteIDs;
+
+        public List<Exhibit> Exhibits { get; set; }
 
         /// <summary>
         /// Private constructor to make the singleton pattern.
         /// </summary>
         private ExhibitBase()
         {
-            exhibits = GetDemoExhibits();
+            Exhibits = GetDemoExhibits();
+            favouriteIDs = new List<Guid>();
         }
 
         public static ExhibitBase GetExhibitBase()
@@ -28,6 +31,26 @@ namespace HyattGalleries.Models
                 instance = new ExhibitBase();
             }
             return instance;
+        }
+
+        public List<Exhibit> GetFavourites()
+        {
+            List<Exhibit> favs = new List<Exhibit>();
+            for (int i = 0; i < favouriteIDs.Count; i++)
+            {
+                favs.Add(Exhibits.Find((e) => e.ID == favouriteIDs[i]));
+            }
+            return favs;
+        }
+
+        public void AddFavourite(Guid exhibitID)
+        {
+            favouriteIDs.Add(exhibitID);
+        }
+
+        public void RemoveFavourite(Guid exhibitID)
+        {
+            favouriteIDs.Remove(exhibitID);
         }
 
         // Returns a list of demo exhibits
