@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HyattGalleries.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,13 @@ namespace HyattGalleries.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class FavouritesPage : ContentPage
 	{
+        FavouritesViewModel viewModel;
+
 		public FavouritesPage ()
 		{
 			InitializeComponent ();
+
+            BindingContext = viewModel = new FavouritesViewModel();
 		}
 	}
 }

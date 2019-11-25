@@ -29,7 +29,8 @@ namespace HyattGalleries.Views
             tapGestureRecognizer.Tapped += (s, e) =>
             {
                 Navigation.PushAsync(new FavouritesPage());
-            }
+            };
+            image_basket.GestureRecognizers.Add(tapGestureRecognizer);
 		}
 	}
 }
