@@ -8,14 +8,18 @@
         <vm:FavouritesViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <CollectionView ItemsSource="{Binding Favourites}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <ContentView>
-                        <Label Text="{Binding Name}" />
-                    </ContentView>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+        <StackLayout>
+            <Label Text="Favourites" FontSize="20" Margin="16, 0" />
+            <BoxView Color="{StaticResource PrimaryColor}" HorizontalOptions="Fill" HeightRequest="1" Margin="16, 0" />
+            <CollectionView ItemsSource="{Binding Favourites}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <Label Text="{Binding Name}" />
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

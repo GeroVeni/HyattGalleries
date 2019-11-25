@@ -23,7 +23,7 @@ namespace HyattGalleries.Droid
             // Init Barcode Scanner
             ZXing.Mobile.MobileBarcodeScanner.Initialize(Application);
             // Init media player
-            CrossMediaManager.Current.Init();
+            //CrossMediaManager.Current.Init();
             // Add flags for collection view
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

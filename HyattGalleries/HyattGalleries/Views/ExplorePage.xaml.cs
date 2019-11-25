@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using static HyattGalleries.ViewModels.ExploreViewModel;
 
 namespace HyattGalleries.Views
 {
@@ -42,8 +43,8 @@ namespace HyattGalleries.Views
 
             // Open exhibit page
             // TODO: Parametrize exhibit page to open specified exhibit
-            Exhibit exhibit = e.CurrentSelection[0] as Exhibit;
-            await Navigation.PushAsync(new ExhibitPage(exhibit.ID));
+            Guid id = (e.CurrentSelection[0] as ExhibitInfo).Exhibit.ID;
+            await Navigation.PushAsync(new ExhibitPage(id));
 
             // Deselect item
             exhibitCollView.SelectedItem = null;
