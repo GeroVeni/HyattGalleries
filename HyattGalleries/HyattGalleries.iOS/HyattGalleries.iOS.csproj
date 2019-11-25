@@ -201,6 +201,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Plugin.MediaManager">
+      <Version>0.8.18</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Plugin.MediaManager" Version="0.8.18" />
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
     <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />  
   </ItemGroup>

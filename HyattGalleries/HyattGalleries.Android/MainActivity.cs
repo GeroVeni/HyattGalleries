@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Support.V4.Content;
+using MediaManager;
 
 namespace HyattGalleries.Droid
 {
@@ -19,7 +20,11 @@ namespace HyattGalleries.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+            // Init Barcode Scanner
             ZXing.Mobile.MobileBarcodeScanner.Initialize(Application);
+            // Init media player
+            CrossMediaManager.Current.Init();
+            // Add flags for collection view
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());

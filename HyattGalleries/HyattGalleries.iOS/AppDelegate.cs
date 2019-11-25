@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using MediaManager;
 using UIKit;
 
 namespace HyattGalleries.iOS
@@ -22,6 +23,9 @@ namespace HyattGalleries.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            // Init media player
+            CrossMediaManager.Current.Init();
+            // Add flags for collection view
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
