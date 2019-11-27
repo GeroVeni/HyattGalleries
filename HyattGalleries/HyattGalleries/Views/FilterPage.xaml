@@ -24,10 +24,11 @@
                     <CollectionView HeightRequest="150" ItemsSource="{Binding Artists}" ItemsLayout="HorizontalList">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <StackLayout Margin="8" WidthRequest="100" VerticalOptions="Fill">
+                                <StackLayout Margin="8" WidthRequest="150" VerticalOptions="Fill">
                                     <Label Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="Center" />
-                                    <CheckBox Color="{StaticResource PrimaryColor}" WidthRequest="30" HeightRequest="30"
-                                              VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    <CheckBox IsChecked="{Binding IsChecked}" Color="{StaticResource PrimaryColor}"
+                                              WidthRequest="30" HeightRequest="30"
+                                              VerticalOptions="Center" HorizontalOptions="Center" />
                                 </StackLayout>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
@@ -40,9 +41,9 @@
                     <CollectionView HeightRequest="150" ItemsSource="{Binding TimePeriods}" ItemsLayout="HorizontalList">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <StackLayout Margin="8" WidthRequest="100" VerticalOptions="Fill">
+                                <StackLayout Margin="8" WidthRequest="150" VerticalOptions="Fill">
                                     <Label Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="Center" />
-                                    <CheckBox Color="{StaticResource PrimaryColor}" WidthRequest="30" HeightRequest="30"
+                                    <CheckBox IsChecked="{Binding IsChecked}" Color="{StaticResource PrimaryColor}" WidthRequest="30" HeightRequest="30"
                                               VerticalOptions="Center" HorizontalOptions="Center"/>
                                 </StackLayout>
                             </DataTemplate>

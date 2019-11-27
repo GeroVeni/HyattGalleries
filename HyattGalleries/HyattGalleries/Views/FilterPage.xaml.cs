@@ -22,7 +22,8 @@ namespace HyattGalleries.Views
 
         private async void OnCreateRoutePressed(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MapPage());
+            var selectedExhibits = viewModel.GetFilteredExhibits();
+            await Navigation.PushAsync(new MapPage(selectedExhibits));
         }
     }
 }

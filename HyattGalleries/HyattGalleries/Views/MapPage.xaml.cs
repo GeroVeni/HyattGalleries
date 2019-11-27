@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HyattGalleries.Models;
+using HyattGalleries.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,16 @@ namespace HyattGalleries.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MapPage : ContentPage
 	{
-		public MapPage ()
+
+        MapViewModel viewModel;
+
+		public MapPage (List<Exhibit> exhibits)
 		{
 			InitializeComponent ();
+
+            viewModel = new MapViewModel();
+            viewModel.Exhibits = exhibits;
+            BindingContext = viewModel;
 		}
 	}
 }

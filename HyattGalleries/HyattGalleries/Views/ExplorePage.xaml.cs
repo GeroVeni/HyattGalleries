@@ -27,8 +27,10 @@ namespace HyattGalleries.Views
             if (e.CurrentSelection.Count == 0) return;
 
             // Open map page
-            // TODO: Parametrize map page to open specific route
-            await Navigation.PushAsync(new MapPage());
+            RouteInfo info = e.CurrentSelection[0] as RouteInfo;
+            List<Exhibit> exhibits = FiltersViewModel.GetFilteredExhibits(info.ArtistFilter, info.TimePeriodFilter,
+                info.ArtStyleFilter);
+            await Navigation.PushAsync(new MapPage(exhibits));
 
             // Deselect item
             routesCollView.SelectedItem = null;

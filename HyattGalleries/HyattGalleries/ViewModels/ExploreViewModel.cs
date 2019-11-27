@@ -13,11 +13,35 @@ namespace HyattGalleries.ViewModels
         public List<RouteInfo> PreselectedRoutes { get; set; }
         public List<ExhibitInfo> PopularExhibits { get; set; }
 
-        public ExploreViewModel ()
+        public ExploreViewModel()
         {
-            PreselectedRoutes = new List<RouteInfo>();
-            for (int i = 0; i < 5; i++) PreselectedRoutes.Add(new RouteInfo { imageSource = "", name = "test route " + i });
+            // Make a list of preselected routes
+            RouteInfo filter1 = new RouteInfo { ImageSource = "", Name = "Classic" };
+            filter1.ArtStyleFilter = new List<ArtStyle>
+            {
+                new ArtStyle("Classic")
+            };
 
+            RouteInfo filter2 = new RouteInfo { ImageSource = "", Name = "17th century" };
+            filter2.TimePeriodFilter = new List<TimePeriod>
+            {
+                new TimePeriod("17th century")
+            };
+
+            RouteInfo filter3 = new RouteInfo { ImageSource = "", Name = "ALEKOS TZOMAKAS" };
+            filter3.ArtistFilter = new List<Artist>
+            {
+                new Artist("ALEKOS TZOMAKAS")
+            };
+
+            PreselectedRoutes = new List<RouteInfo>
+            {
+                filter1,
+                filter2,
+                filter3
+            };
+            
+            // Make a list of popular exhibits
             ExhibitBase exhibitBase = ExhibitBase.GetExhibitBase();
 
             PopularExhibits = new List<ExhibitInfo>();
@@ -37,8 +61,18 @@ namespace HyattGalleries.ViewModels
         /// </summary>
         public class RouteInfo
         {
-            public string imageSource;
-            public string name { get; set; }
+            public string ImageSource;
+            public string Name { get; set; }
+            public List<Artist> ArtistFilter { get; set; }
+            public List<TimePeriod> TimePeriodFilter { get; set; }
+            public List<ArtStyle> ArtStyleFilter { get; set; }
+
+            public RouteInfo ()
+            {
+                ArtistFilter = null;
+                TimePeriodFilter = null;
+                ArtStyleFilter = null;
+            }
         }
 
         /// <summary>
