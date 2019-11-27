@@ -23,7 +23,7 @@ namespace HyattGalleries.Views
             // TODO: Remove other attributes apart from ID from ExhibitID
             viewModel.ExhibitID = exhibit.ID;
             viewModel.ExhibitName = exhibit.Name;
-            viewModel.ExhibitDescription = exhibit.Name;
+            viewModel.ExhibitDescription = ArtistBase.GetInstance().GetArtistBio(exhibit.Artist.Name);
             viewModel.IsFavourite = FavExhibits.Contains(exhibit);
             BindingContext = viewModel;
 

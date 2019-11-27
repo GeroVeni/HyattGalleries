@@ -40,7 +40,8 @@
             </Grid>
             
             <!--Exhibit list-->
-            <CollectionView HeightRequest="150" ItemsSource="{Binding Exhibits}" ItemsLayout="HorizontalList">
+            <CollectionView x:Name="exhibitCollView" HeightRequest="150" ItemsSource="{Binding Exhibits}"
+                            ItemsLayout="HorizontalList" SelectionMode="Single" SelectionChanged="OnExhibitSelected">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <ContentView>

@@ -44,7 +44,6 @@ namespace HyattGalleries.Views
             if (e.CurrentSelection.Count == 0) return;
 
             // Open exhibit page
-            // TODO: Parametrize exhibit page to open specified exhibit
             Guid id = (e.CurrentSelection[0] as ExhibitInfo).Exhibit.ID;
             await Navigation.PushAsync(new ExhibitPage(id));
 

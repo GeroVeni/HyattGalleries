@@ -20,7 +20,9 @@
                 <Image Source="ic_pause.png" Margin="16" />
                 <Image Source="ic_replay.png" Margin="16" />
             </StackLayout>
-            <Label Margin="8" Font="20" Text="{Binding ExhibitDescription}" />
+            <ScrollView Margin="8">
+                <Label Font="20" Text="{Binding ExhibitDescription}" />
+            </ScrollView>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
                 <Button Text="Artist's Bio" Margin="8" HorizontalOptions="Start" WidthRequest="200" />
                 <Image x:Name="image_favourite" Source="{Binding FavImageSource}" BackgroundColor="{StaticResource PrimaryColor}"
