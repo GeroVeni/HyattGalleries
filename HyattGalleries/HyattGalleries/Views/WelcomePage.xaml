@@ -9,7 +9,7 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-             <Label Text="HYATT" FontSize= "70" Margin="0, 50, 0, 0"
+             <Label Text="{StaticResource AppName}" FontSize= "70" Margin="0, 50, 0, 0"
                             VerticalOptions="StartAndExpand"  HorizontalOptions="Center" />
             <Label x:Name="welcomeLabel" Text="Welcome to Myro Thessaloniki" FontSize="25" Margin="10, 0, 0, 10" HorizontalTextAlignment="Center" />
             <Button Text="Explore" FontSize="30" Margin="50,0,50,20"

@@ -4,6 +4,8 @@
              x:Class="HyattGalleries.App">
     <Application.Resources>
         <ResourceDictionary>
+            <x:String x:Key="AppName">Curator</x:String>
+            
             <!--Custom Colors (using material guidelines: Cyan saturation 600)-->
             <!--Link for dark themes: https://material.io/design/color/dark-theme.html-->
             <Color x:Key="BackgroundColor">#121212</Color>
@@ -25,6 +27,7 @@
             </Style>
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource OnSurfaceColor}" />
+                <Setter Property="FontFamily" Value="Lobster-Regular" />
             </Style>
             <Style TargetType="Entry">
                 <Setter Property="TextColor" Value="{StaticResource OnSurfaceColor}" />

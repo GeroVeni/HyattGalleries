@@ -5,7 +5,7 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="HYATT" FontSize= "70" Margin="0, 50, 0, 0"
+            <Label Text="{StaticResource AppName}" FontSize= "70" Margin="0, 50, 0, 0"
                     VerticalOptions="StartAndExpand"  HorizontalOptions="Center" />
             <Button Text="Log In" FontSize="40" WidthRequest="300" HeightRequest="70" CornerRadius="35"
                     HorizontalOptions="Center" Clicked="OnLoginPressed" />
