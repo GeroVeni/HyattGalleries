@@ -1,4 +1,5 @@
-﻿using HyattGalleries.Services;
+﻿using HyattGalleries.Models;
+using HyattGalleries.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -22,10 +23,10 @@ namespace HyattGalleries.Views
         private async void OnScanClicked(object sender, EventArgs e)
         {
             // TODO: Launch scanner when explore button is pressed.
-            LaunchScanner();
+            await LaunchScanner();
         }
 
-        private async void LaunchScanner()
+        private async Task LaunchScanner()
         {
             try
             {
@@ -34,13 +35,16 @@ namespace HyattGalleries.Views
                 // TODO: Handle case when result is null
                 if (result != null)
                 {
-                    Debug.WriteLine("Result is: " + result);
+                    ExhibitBase exhibitBase = ExhibitBase.GetExhibitBase();
+                    Exhibit exhibit = exhibitBase.Exhibits.Find(e => e.Name == result);
+                    await Navigation.PushAsync(new ExhibitPage(exhibit.ID));
                 }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine("Error during qrcode scanning:" + ex.Message);
                 // TODO: Return that scanning failed.
+                throw;
             }
         }
     }
